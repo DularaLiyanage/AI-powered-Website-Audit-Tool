@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 def analyze_page(url):
     response = requests.get(url, timeout=10)
@@ -25,7 +25,8 @@ def analyze_page(url):
 
     for link in links:
         href = link['href']
-        if parsed_url in href:
+        full_href = urljoin(url, href)
+        if parsed_url in urlparse(full_href).netloc:
             internal += 1
         else:
             external += 1
@@ -54,12 +55,16 @@ def analyze_page(url):
 
     metrics = {
         "word_count": word_count,
-        "headings": {"h1": h1, "h2": h2, "h3": h3},
+        "headings": {
+            "h1": [h.get_text(strip=True) for h in soup.find_all('h1')],
+            "h2": [h.get_text(strip=True) for h in soup.find_all('h2')],
+            "h3": [h.get_text(strip=True) for h in soup.find_all('h3')]
+        },
         "cta_count": cta_count,
         "links": {"internal": internal, "external": external},
         "images": {
             "total": total_images,
-            "missing_alt_percent": round(missing_alt_percent, 2)
+            "missing_alt_percent": round(missing_alt_percent)
         },
         "meta": {
             "title": title,
