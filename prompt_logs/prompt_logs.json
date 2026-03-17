@@ -1,0 +1,26 @@
+{
+  "system_prompt": "\nYou are a senior SEO and UX analyst.\n\nYou must analyze a webpage using ONLY the provided metrics and content.\n\nRules:\n- Do not make assumptions beyond the data\n- Always reference metrics explicitly\n- Be specific, not generic\n- Structure output clearly\n\nOutput format:\n\n1. SEO Structure Analysis\n2. Messaging Clarity\n3. CTA Usage\n4. Content Depth\n5. UX Concerns\n\nThen:\n\n6. Recommendations (3-5 items)\nEach recommendation must:\n- Reference a metric\n- Explain reasoning\n- Be actionable\n",
+  "user_prompt": "\nURL: https://www.riocomputers.lk/riostore/\n\nMetrics:\n{\n  \"word_count\": 151,\n  \"headings\": {\n    \"h1\": 0,\n    \"h2\": 0,\n    \"h3\": 0\n  },\n  \"cta_count\": 1,\n  \"links\": {\n    \"internal\": 63,\n    \"external\": 3\n  },\n  \"images\": {\n    \"total\": 14,\n    \"missing_alt_percent\": 0.0\n  },\n  \"meta\": {\n    \"title\": \"Rio Computers\",\n    \"description\": \"Rio Computers\"\n  }\n}\n\nPage Content:\nRio Computers 0715376785 My Account Register Login Wish List (0) Shopping Cart Checkout 0 item(s) - Rs0.00 Your shopping cart is empty! Categories Games Desktop Brand New (0) Used (0) Show All Desktop Laptops Components Computer Case (0) Coolers (4) Graphic Card (0) HDD (2) Memory (9) Monitors (0) MotherBoard (0) NVME (0) Power supply (2) SSD (1) UPS AND BATTERY (1) Show All Components Accessories Adapters (4) Cables (9) CADDY (1) Combo (3) Converters (2) Cooling Pad (1) ENCLOSURE (2) Fan (0) HUBs (3) Mouse pad (0) Thermal Paste (0) Show All Accessories Peripherals Controllers (1) Headset (4) Keyboards (4) Microphone (0) Mouse (8) Speaker (6) WebCam (2) Show All Peripherals Information Terms & Conditions Delivery Information About Us Privacy Policy Customer Service Contact Us Returns Site Map Extras Brands Gift Certificates Affiliate Specials My Account My Account Order History Wish List Newsletter Powered By OpenCart Rio Computers \u00a9 2026\n",
+  "input_metrics": {
+    "word_count": 151,
+    "headings": {
+      "h1": 0,
+      "h2": 0,
+      "h3": 0
+    },
+    "cta_count": 1,
+    "links": {
+      "internal": 63,
+      "external": 3
+    },
+    "images": {
+      "total": 14,
+      "missing_alt_percent": 0.0
+    },
+    "meta": {
+      "title": "Rio Computers",
+      "description": "Rio Computers"
+    }
+  },
+  "raw_output": "1. **SEO Structure Analysis**\n   - **Headings**: The page contains no H1, H2, or H3 headings. This absence of headings hampers SEO as search engines rely on headings to understand the content hierarchy and context.\n   - **Meta Tags**: The meta title is \"Rio Computers\" and the meta description is simply \"Rio Computers\". These lack detail and keywords that could enhance search visibility.\n\n2. **Messaging Clarity**\n   - The title and content focus on the brand name \"Rio Computers\" but lack descriptive messaging about what the site offers. The content primarily consists of functional elements (e.g., cart status, account options) rather than engaging or promotional messaging.\n\n3. **CTA Usage**\n   - There is only **one CTA** present. While having a CTA is good, a singular CTA may not be sufficient to guide users through various actions they may want to take on the site, especially for e-commerce.\n\n4. **Content Depth**\n   - The **word count is 151**, which is very low for an e-commerce site. This lack of content depth may affect both user engagement and search engine rankings as it does not provide enough information or value to visitors.\n\n5. **UX Concerns**\n   - Navigation could be improved. While there are many internal links (63), the lack of headings and organized content makes it difficult for users to find what they're looking for.\n   - The use of technical jargon (like \"NVME\") without explanations could confuse users who may not be familiar with all terms in computing.\n\n6. **Recommendations**\n   - **Implement Headings**: Add at least one H1 and several H2 headings to structure the content. This would enhance SEO (currently no headings) and improve user navigation.\n   - **Expand Meta Tags**: Revise the meta title and description to include more relevant keywords. This is vital as current titles and descriptions do not utilize SEO potential effectively, which limits discoverability.\n   - **Develop Content**: Increase the word count beyond 151 to provide detailed descriptions of products, categories, and services offered. Rich content helps with SEO and user engagement levels.\n   - **Add More CTAs**: Introduce additional CTAs to guide users towards popular products or featured categories. Having only one CTA may not effectively encourage users to explore or purchase items.\n   - **Enhance Messaging**: Add engaging content that clearly communicates unique value propositions or promotions to inform visitors about offerings and differentiate from competitors. This addresses current messaging clarity issues."
+}
