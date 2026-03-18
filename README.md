@@ -28,7 +28,7 @@ The tool is divided into three key areas, designed with a clean separation of co
 
 1. **Metrics as the Primary Source of Truth**: The AI is instructed to base its insights primarily on the numeric data provided from BeautifulSoup (e.g., word count, tags counts, missing alt tags), while using the parsed `<text>` only to supplement its reasoning. This grounds the AI in reality instead of letting it hallucinate layout elements.
 
-2. **Strict Output Formatting Guidelines**: Enforced a predictable output structure by injecting a rigid `OUTPUT STRUCTURE` template into the system prompt. By heavily defining the expected markdown headers (e.g., `1. SEO STRUCTURE`, `6. PRIORITIZED RECOMMENDATIONS`, `7. OVERALL SCORE (0–100)`), I can parse out the exact scores programmatically via regex in the frontend while still allowing the LLM to write flowing contextual paragraphs.
+2. **Strict Output Formatting Guidelines**: Enforced a predictable output structure by injecting a rigid `OUTPUT STRUCTURE` template into the system prompt. By heavily defining the expected markdown headers (e.g., `1. SEO STRUCTURE`, `6. PRIORITIZED RECOMMENDATIONS`, `7. OVERALL SCORE (0–100)`), this can parse out the exact scores programmatically via regex in the frontend while still allowing the LLM to write flowing contextual paragraphs.
 
 3. **Structured Prompt Configuration**: The system prompt clearly delineates guidelines and rules. Giving the AI a persona ("senior SEO consultant") ensures the language is not generic but rather practical, actionable agency advice.
 
