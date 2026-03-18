@@ -31,21 +31,22 @@ if st.button("Analyze"):
                 st.markdown("---")
 
                 # SCORE SECTION
-                # Use a case-insensitive regex that handles possible markdown bolding (e.g. **Overall Score:** 62/100)
                 score_match = re.search(r"(?i)score\b\W*(\d+)(?:/100)?", ai_output)
 
-                if not score_match:
+                if not score_match: 
                     st.info("📊 Score not available")
 
-                if score_match:
+                if score_match: 
                     score = int(score_match.group(1))
 
-                    if score >= 75:
+                    if score >= 75: 
                         st.success(f"📊 Overall Score: {score}/100")
-                    elif score >= 50:
-                        st.warning(f"📊 Overall Score: {score}/100")
-                    else:
+                    elif score >= 50: 
+                        st.warning(f"📊 Overall Score: {score}/100") 
+                    else: 
                         st.error(f"📊 Overall Score: {score}/100")
+
+                st.markdown("---")
 
                 # METRICS SECTION
                 h1_count = len(metrics["headings"]["h1"])
@@ -91,8 +92,10 @@ if st.button("Analyze"):
                 st.markdown("---")
 
                 # AI OUTPUT
-                st.subheader("🤖 AI Insights & Recommendations")
-                st.markdown(ai_output)
+                st.subheader("AI Insights & Recommendations")
+                formatted_output = ai_output.replace("\n", "\n\n")
+
+                st.markdown(formatted_output)
 
             except Exception as e:
                 st.error(f"Error: {e}")

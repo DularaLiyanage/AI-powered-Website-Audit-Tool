@@ -2,6 +2,8 @@ from openai import OpenAI
 import json
 import os
 from dotenv import load_dotenv
+from datetime import datetime
+from urllib.parse import urlparse
 
 load_dotenv()
 
@@ -111,14 +113,23 @@ IMPORTANT:
     ai_output = response.choices[0].message.content
 
     # Save prompt logs
+    # Generate clean filename from URL + timestamp
+    domain = urlparse(url).netloc.replace("www.", "")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"prompt_logs/{domain}_{timestamp}.json"
+
+    os.makedirs("prompt_logs", exist_ok=True)
+
     logs = {
+        "url": url,
+        "timestamp": timestamp,
         "system_prompt": system_prompt,
         "user_prompt": user_prompt,
         "input_metrics": metrics,
         "raw_output": ai_output
     }
 
-    with open("prompt_logs/prompt_logs.json", "w") as f:
+    with open(filename, "w") as f:
         json.dump(logs, f, indent=2)
 
     return ai_output
