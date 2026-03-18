@@ -8,7 +8,7 @@ Deployed on Streamlit Community Cloud: [https://ai-powered-website-audit-tool.st
 
 ## Deliverables & Links
 
-1. **GitHub Repository**: (The current directory where this system sits)
+1. **GitHub Repository**: ([The current directory where this system sits](https://github.com/DularaLiyanage/AI-powered-Website-Audit-Tool))
 2. **Local Web App Instructions**: See [Setup & Run Instructions](#setup--run-instructions) below.
 3. **Prompt Logs**: Found in the `prompt_logs/` directory after a successful analysis.
 
