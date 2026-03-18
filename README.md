@@ -96,17 +96,7 @@ This tool requires Python 3.8+.
 
 ## Deployment to Streamlit Cloud
 
-Since this tool is built with Streamlit, it is incredibly easy to host on [Streamlit Community Cloud](https://streamlit.io/cloud):
-
-1. **Push to GitHub**: Ensure all your files (`app.py`, `analyzer.py`, `ai_insights.py`, `requirements.txt`) are pushed to a public or private GitHub repository.
-2. **Create Streamlit Cloud Account**: Go to [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.
-3. **Deploy App**: Click the "New app" button in your workspace.
-4. **Select Repository**: Choose this repository, the branch (e.g., `main`), and the main file path (`app.py`).
-5. **Set Secrets (API Key)**: Before clicking Deploy, click on "Advanced settings..." and add your OpenAI API key in the 'Secrets' field:
-   ```toml
-   OPENAI_API_KEY="your_api_key_here"
-   ```
-6. **Deploy**: Click "Deploy!" and your web app will be live and accessible via a public URL interface.
+This tool is built with Streamlit and it currently host on streanlit cloud [https://ai-powered-website-audit-tool.streamlit.app/](https://ai-powered-website-audit-tool.streamlit.app/)
 
 ## Prompt Log Structure
 
