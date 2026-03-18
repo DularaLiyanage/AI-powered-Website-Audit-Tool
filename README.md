@@ -4,7 +4,7 @@ This tool is a lightweight, AI-driven website audit application. It takes a sing
 
 ## Live Application
 
-Deployed on Streamlit Community Cloud: [text](https://your-app-name.streamlit.app)
+Deployed on Streamlit Community Cloud: [text](https://ai-powered-website-audit-tool.streamlit.app/)
 
 ## Deliverables & Links
 
