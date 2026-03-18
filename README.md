@@ -96,7 +96,7 @@ This tool requires Python 3.8+.
 
 ## Deployment to Streamlit Cloud
 
-This tool is built with Streamlit and it currently host on streanlit cloud [https://ai-powered-website-audit-tool.streamlit.app/](https://ai-powered-website-audit-tool.streamlit.app/)
+This tool is built with Streamlit and is currently hosted on Streamlit Community Cloud : [https://ai-powered-website-audit-tool.streamlit.app/](https://ai-powered-website-audit-tool.streamlit.app/)
 
 ## Prompt Log Structure
 
