@@ -7,7 +7,9 @@ from urllib.parse import urlparse
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+
+client = OpenAI(api_key=api_key)
 
 def generate_ai_insights(url, metrics, content):
 
